@@ -10,7 +10,7 @@ Classic tic tac toe Game written in C++ !
 ```
 sudo apt update && apt upgrade
 
-sudo apt install clang gcc -y
+sudo apt install clang gcc git -y
 
 git clone https://github.com/RedMads/tic_tac_toe.git
 
