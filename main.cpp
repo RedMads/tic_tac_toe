@@ -21,12 +21,16 @@
 #include <stdio.h>
 #include <ctime>
 #include <cstdlib>
+#include <thread>
 #include <conio.h>
 
 using namespace std;
+
 using namespace this_thread;
 
 #define clear system("clear");
+
+
 
 // some Global Variabels ! 
 
@@ -34,15 +38,16 @@ const int LIMIT_SIZE = 3;
 
 char board[LIMIT_SIZE][LIMIT_SIZE] = {{'1','2','3'},{'4','5','6'},{'7','8','9'}};
 
-
-
 char player = 'X';
+
+//################################################################################//
 
 class Tic{
 
 
     public:
-
+        
+        // This Function Generate Random Number!
         int gen_random(int max, bool computer=false) {
 
             if(!computer) {
@@ -73,6 +78,7 @@ class Tic{
 
         }
 
+        // This Function reset the board and the player to defult values!
         void setup(bool computer = false) {
 
             if(computer == false) {
@@ -114,6 +120,8 @@ class Tic{
 
         }
 
+
+        // This Function Draw The board!
         void draw_board() {
             clear;
 
@@ -137,7 +145,7 @@ class Tic{
 
         }
 
-
+        // print the banner!
         void banner() {
 
             cout << "╔╦╗┬┌─┐  ╔╦╗┌─┐┌─┐  ╔╦╗┌─┐┌─┐\n";
@@ -150,6 +158,7 @@ class Tic{
         }
 
 
+        // The Main Menu function!
         void menu() {
 
             clear;
@@ -189,7 +198,7 @@ class Tic{
 
         }
 
-
+        // Change The Player Symbol every Turn!
         void change_player() {
 
             if(player == 'X')
@@ -202,6 +211,7 @@ class Tic{
         }
 
 
+        // This Function Check The winner or Loser or Equals!
         char check_winner() {
 
             int counter = 0;
@@ -260,6 +270,7 @@ class Tic{
         }
 
 
+        // This Function choose the computer choice randomly!
         void computer_choice(){
 
             char computer_sympol = 'O';
@@ -307,9 +318,6 @@ class Tic{
 
                     }
 
-                    //else break;
-
-
 
                     }
 
@@ -321,7 +329,7 @@ class Tic{
             
         }
 
-
+        // This Function for < Player vs Computer > Mode!
         void play_computer() {
 
             player = 'X';  
@@ -360,6 +368,7 @@ class Tic{
         }
 
         
+        // This Function for < Player vs Player > Mode !
         void play() {
 
             
@@ -395,6 +404,7 @@ class Tic{
         }
 
 
+        // This Function ask the player for play again or not && reset the defult values! 
         void again_play(bool computer=false) {
 
             if(computer == false) {
@@ -459,7 +469,6 @@ class Tic{
 
         }
 };
-
 
 
 
