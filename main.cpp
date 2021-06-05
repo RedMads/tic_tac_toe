@@ -1,3 +1,22 @@
+/*
+    Hello Guys im RedMad :$, this my secund C++ Project!
+
+    Simple Tic Tac Toe Game with many features!
+
+    
+    Features:
+
+        1- Player vs Player Mode!
+        2- Player vs Computer Mode!
+        3- Simple UI Menu!
+
+
+    i hope this code help some people!
+
+
+    - RedMad :$
+*/
+
 #include <iostream>
 #include <stdio.h>
 #include <ctime>
