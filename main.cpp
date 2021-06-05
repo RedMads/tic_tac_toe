@@ -21,8 +21,6 @@
 #include <stdio.h>
 #include <ctime>
 #include <cstdlib>
-#include <fstream>
-#include <thread>
 #include <conio.h>
 
 using namespace std;
